@@ -1,0 +1,12 @@
+.list-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: 50px;
+}
+.single-item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+
+
+}

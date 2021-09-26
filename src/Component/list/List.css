@@ -1,0 +1,25 @@
+
+.person-detail{
+    background-color: lightyellow;
+    margin-right: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.img{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    border-radius: 100px;
+}
+.btn{
+    align-items: center;
+    justify-content: center;
+    background-color: goldenrod;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 150px;
+    height: 25px;
+    
+}
