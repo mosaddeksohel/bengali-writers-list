@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import List from '../list/List';
+import Person from '../Person/Person';
 import './Writer.css'
 
 const Writer = () => {
     const [writers, setWriters] = useState([]);
+    const [newWriter, setNewWriter] = useState([]);
     useEffect(() => {
         fetch('./writer.JSON')
             .then(res => res.json())
             .then(data => setWriters(data))
     }, [])
+
+
+    const handleAddToCart = (writer) => {
+        const person = [...newWriter, writer];
+        setNewWriter(person)
+    }
+
+
     return (
         <div className="list-container">
             <div className="cart-list">
@@ -16,14 +26,17 @@ const Writer = () => {
                     <h4>Total Person: {writers.length}</h4>
                     <div className="single-item">
                         {
-                            writers.map(writer => <List writer={writer}></List>)
+                            writers.map(writer => <List
+                                key={writers.name}
+                                writer={writer}
+                                handleAddToCart={handleAddToCart}
+                            ></List>)
                         }
                     </div>
                 </div>
             </div>
             <div className="added-list">
-                <h3>person Added: </h3>
-                <h3>Total Property: $</h3>
+                {/* <Person newWriter={newWriter}></Person> */}
             </div>
         </div>
     );
