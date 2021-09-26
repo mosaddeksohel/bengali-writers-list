@@ -1,6 +1,6 @@
 # Bengali Writers List
 
-Live link of the website [Bengali Writers List](bengali-writers-list.netlify.app).
+Live link of the website [Bengali Writers List](http://bengali-writers-list.netlify.app).
 
 ## Available Scripts
 
