@@ -1,10 +1,11 @@
 
 .person-detail{
-    background-color: lightyellow;
+    background-color:lightgrey ;
     margin-right: 10px;
     padding: 10px;
     margin-bottom: 20px;
     line-height: 4px;
+    border-radius: 10px;
 }
 
 .img{
@@ -27,4 +28,7 @@
     width: 150px;
     height: 25px;
     
+}
+.bye-button{
+    text-align: center;
 }

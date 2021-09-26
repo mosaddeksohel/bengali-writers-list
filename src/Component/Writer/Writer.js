@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import List from '../list/List';
 import Person from '../Person/Person';
+import Name from '../Writer-Name/Name'
 import './Writer.css'
 
 
@@ -8,6 +9,8 @@ import './Writer.css'
 const Writer = () => {
     const [writers, setWriters] = useState([]);
     const [newWriter, setNewWriter] = useState([]);
+    const [newName, setNewName] = useState([]);
+
     useEffect(() => {
         // fetch Data 
         fetch('./writer.JSON')
@@ -18,8 +21,10 @@ const Writer = () => {
     // call handler 
     const handleAddToCart = (writer) => {
         const writerNew = [...newWriter, writer];
-        setNewWriter(writerNew)
+        setNewWriter(writerNew);
+        setNewName(newName);
     }
+
 
 
     return (
@@ -41,6 +46,8 @@ const Writer = () => {
             <div className="added-list">
                 {/* connect to a component */}
                 <Person newWriter={newWriter}></Person>
+                <Name writers={writers}></Name>
+
 
             </div>
         </div>

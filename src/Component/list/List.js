@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import Writer from '../Writer/Writer';
 import './List.css'
 
@@ -12,12 +14,15 @@ const List = (props) => {
                 </div>
                 <h3>Name: {name}</h3>
                 <h4>Career: {career}</h4>
-                <h4>Property: {book}</h4>
+                <h4>Book: {book}</h4>
                 <h4>Age: {age}</h4>
                 <h4>Death: {death}</h4>
-                <button
-                    onClick={() => props.handleAddToCart(book)}
-                    className="btn">Add to cart</button>
+                <div className="bye-button">
+                    <button
+                        onClick={() => props.handleAddToCart(book)}
+                        className="btn"><FontAwesomeIcon icon={faShoppingCart} /> Buy Book</button>
+                </div>
+
             </div>
         </div>
     );

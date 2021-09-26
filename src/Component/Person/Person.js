@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Person = (props) => {
+    console.log(props)
     const { newWriter } = props;
     // add total 
     let total = 0;

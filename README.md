@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Bengali Writers List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live link of the website [Bengali Writers List](bengali-writers-list.netlify.app).
 
 ## Available Scripts
 
