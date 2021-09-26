@@ -1,16 +1,17 @@
 import React from 'react';
 
 const Person = (props) => {
-    const { person } = props;
-    let property = 0;
-    for (const newWriter of person) {
-        property = property + newWriter.property;
-
+    console.log(props)
+    const { newWriter } = props;
+    let total = 0;
+    for (const property of newWriter) {
+        total = total + property;
     }
+
     return (
         <div>
-            <h3>person Added: {props.person.length}</h3>
-            <h3>Total Property: $ {property}</h3>
+            <h3>person Added: {newWriter.length}</h3>
+            <h3>Total Property: ${total} </h3>
         </div>
     );
 };

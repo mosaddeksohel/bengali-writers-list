@@ -14,8 +14,8 @@ const Writer = () => {
 
 
     const handleAddToCart = (writer) => {
-        const person = [...newWriter, writer];
-        setNewWriter(person)
+        const writerNew = [...newWriter, writer];
+        setNewWriter(writerNew)
     }
 
 
@@ -23,7 +23,6 @@ const Writer = () => {
         <div className="list-container">
             <div className="cart-list">
                 <div>
-                    <h4>Total Person: {writers.length}</h4>
                     <div className="single-item">
                         {
                             writers.map(writer => <List
@@ -36,7 +35,8 @@ const Writer = () => {
                 </div>
             </div>
             <div className="added-list">
-                {/* <Person newWriter={newWriter}></Person> */}
+                <Person newWriter={newWriter}></Person>
+
             </div>
         </div>
     );
