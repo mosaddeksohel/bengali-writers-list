@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import List from '../list/List';
 import Person from '../Person/Person';
-import Name from '../Writer-Name/Name'
-import './Writer.css'
-
-
+import './Writer.css';
 // declared State
 const Writer = () => {
     const [writers, setWriters] = useState([]);
     const [newWriter, setNewWriter] = useState([]);
-    const [newName, setNewName] = useState([]);
 
     useEffect(() => {
         // fetch Data 
@@ -21,12 +17,10 @@ const Writer = () => {
     // call handler 
     const handleAddToCart = (writer) => {
         const writerNew = [...newWriter, writer];
+
         setNewWriter(writerNew);
-        setNewName(newName);
+
     }
-
-
-
     return (
         <div className="list-container">
             <div className="cart-list">
@@ -46,7 +40,9 @@ const Writer = () => {
             <div className="added-list">
                 {/* connect to a component */}
                 <Person newWriter={newWriter}></Person>
-                <Name writers={writers}></Name>
+                {/* {
+                    newWriter.map(newName => <Name newName={newWriter}></Name>)
+                } */}
 
 
             </div>

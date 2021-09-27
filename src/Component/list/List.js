@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import Writer from '../Writer/Writer';
 import './List.css'
 
 const List = (props) => {
@@ -19,7 +18,7 @@ const List = (props) => {
                 <h4>Death: {death}</h4>
                 <div className="bye-button">
                     <button
-                        onClick={() => props.handleAddToCart(book)}
+                        onClick={() => props.handleAddToCart(props.writer)}
                         className="btn"><FontAwesomeIcon icon={faShoppingCart} /> Buy Book</button>
                 </div>
 
