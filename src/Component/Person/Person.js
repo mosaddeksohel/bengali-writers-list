@@ -16,7 +16,7 @@ const Person = (props) => {
         <div>
             <div>
                 <h3>Writer Added: {newWriter.length}</h3>
-                <h3>Total Book: ${total} </h3>
+                <h3>Total Book: {total} </h3>
             </div>
             <div className>
                 {
