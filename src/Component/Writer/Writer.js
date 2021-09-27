@@ -40,11 +40,6 @@ const Writer = () => {
             <div className="added-list">
                 {/* connect to a component */}
                 <Person newWriter={newWriter}></Person>
-                {/* {
-                    newWriter.map(newName => <Name newName={newWriter}></Name>)
-                } */}
-
-
             </div>
         </div>
     );
